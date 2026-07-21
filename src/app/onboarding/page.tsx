@@ -20,13 +20,13 @@ function OnboardingContent() {
   const addHabit = useHabitsStore((s) => s.addHabit);
 
   const [selected, setSelected] = React.useState<number[]>(() =>
-    STARTER_HABITS.flatMap((habit, idx) => (habit.recommended ? [idx] : []))
+    STARTER_HABITS.flatMap((habit, idx) => (habit.recommended ? [idx] : [])),
   );
   const [saving, setSaving] = React.useState(false);
 
   function toggle(idx: number) {
     setSelected((prev) =>
-      prev.includes(idx) ? prev.filter((i) => i !== idx) : [...prev, idx]
+      prev.includes(idx) ? prev.filter((i) => i !== idx) : [...prev, idx],
     );
   }
 
@@ -58,7 +58,7 @@ function OnboardingContent() {
         transition={{ duration: 0.25 }}
       >
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-primary">
-          GoodDay
+          Habbits
         </p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight">
           Что берёшь в работу
@@ -78,7 +78,7 @@ function OnboardingContent() {
                 onClick={() => toggle(idx)}
                 className={cn(
                   "flex w-full items-center gap-3 py-3.5 text-left transition-colors",
-                  isSelected ? "text-foreground" : "text-muted-foreground"
+                  isSelected ? "text-foreground" : "text-muted-foreground",
                 )}
               >
                 <span
@@ -86,7 +86,7 @@ function OnboardingContent() {
                     "flex size-5 shrink-0 items-center justify-center border",
                     isSelected
                       ? "border-primary bg-primary text-primary-foreground"
-                      : "border-border"
+                      : "border-border",
                   )}
                 >
                   {isSelected && <Check className="size-3" strokeWidth={3} />}
@@ -107,7 +107,9 @@ function OnboardingContent() {
         <p
           className={cn(
             "mb-3 font-mono text-xs",
-            over ? "text-amber-700 dark:text-amber-400" : "text-muted-foreground"
+            over
+              ? "text-amber-700 dark:text-amber-400"
+              : "text-muted-foreground",
           )}
         >
           {selected.length} выбрано

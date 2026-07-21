@@ -14,6 +14,6 @@ export const useUIStore = create<UIState>()(
       toggleFocusMode: () => set((s) => ({ focusMode: !s.focusMode })),
       setFocusMode: (value) => set({ focusMode: value }),
     }),
-    { name: "goodday-ui" }
-  )
+    { name: "Habbits-ui" },
+  ),
 );

@@ -19,15 +19,15 @@ const mono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "GoodDay",
-    template: "%s · GoodDay",
+    default: "Habbits",
+    template: "%s · Habbits",
   },
   description: "Трекер привычек. Отмечай сделанное, смотри прогресс.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "GoodDay",
+    title: "Habbits",
   },
 };
 
@@ -48,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" suppressHydrationWarning className="h-full">
-      <body className={`${sans.variable} ${mono.variable} min-h-full font-sans`}>
+      <body
+        className={`${sans.variable} ${mono.variable} min-h-full font-sans`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -22,7 +22,7 @@ export default function RootPage() {
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-3">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
-        GoodDay
+        Habbits
       </p>
       <Loader2 className="size-4 animate-spin text-muted-foreground" />
     </div>

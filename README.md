@@ -1,4 +1,4 @@
-# GoodDay
+# Habits
 
 Трекер привычек на Next.js + Supabase.
 
@@ -35,11 +35,11 @@ npm run dev
 
 ## Routes
 
-| Path | |
-| --- | --- |
-| `/login` `/signup` | Auth |
-| `/onboarding` | Выбор стартовых привычек |
-| `/today` | Чек-ины на сегодня |
-| `/habits` | CRUD |
-| `/stats` | Heatmap и стрики |
-| `/settings` | Профиль и тема |
+| Path               |                          |
+| ------------------ | ------------------------ |
+| `/login` `/signup` | Auth                     |
+| `/onboarding`      | Выбор стартовых привычек |
+| `/today`           | Чек-ины на сегодня       |
+| `/habits`          | CRUD                     |
+| `/stats`           | Heatmap и стрики         |
+| `/settings`        | Профиль и тема           |

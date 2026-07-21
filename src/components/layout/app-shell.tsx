@@ -55,7 +55,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             href="/today"
             className="font-mono text-sm font-medium tracking-[0.12em] uppercase text-primary"
           >
-            GoodDay
+            Habbits
           </Link>
 
           <div className="flex items-center gap-1">
@@ -98,7 +98,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   "border-l-2 px-3 py-2 text-sm transition-colors",
                   active
                     ? "border-primary font-medium text-foreground"
-                    : "border-transparent text-muted-foreground hover:text-foreground"
+                    : "border-transparent text-muted-foreground hover:text-foreground",
                 )}
               >
                 {item.label}
@@ -119,10 +119,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               href={item.href}
               className={cn(
                 "flex flex-1 flex-col items-center gap-0.5 py-2.5 text-[11px] font-medium",
-                active ? "text-primary" : "text-muted-foreground"
+                active ? "text-primary" : "text-muted-foreground",
               )}
             >
-              <item.icon className="size-4" strokeWidth={active ? 2.25 : 1.75} />
+              <item.icon
+                className="size-4"
+                strokeWidth={active ? 2.25 : 1.75}
+              />
               {item.label}
             </Link>
           );
